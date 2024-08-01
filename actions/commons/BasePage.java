@@ -22,7 +22,7 @@ public class BasePage {
         return driver.getTitle();
 
     }
-
+//tam
     public String getCurrentPageUrl(WebDriver driver){
         return driver.getCurrentUrl();
     }
