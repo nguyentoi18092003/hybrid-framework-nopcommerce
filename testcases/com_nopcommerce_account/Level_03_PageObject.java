@@ -43,7 +43,7 @@ public class Level_03_PageObject extends BasePage{
         homePage.clickToRegisterLink();
 
         //Tu HomePage click vao RegisterLink no se mo ra trang register Page-> Khoi tao Page do len
-        registerPage=new RegisterPageObject();
+        registerPage=new RegisterPageObject(driver);
 
         registerPage.clickToRegisterButton();
 
@@ -75,7 +75,7 @@ public class Level_03_PageObject extends BasePage{
         homePage.clickToRegisterLink();
 
         // tu home page click voa register lonk no se mo ra trang register page
-        registerPage=new RegisterPageObject();
+        registerPage=new RegisterPageObject(driver);
 
         registerPage.enterToFirstNameTextbox("John");
         registerPage.enterToLastNameTextbox("Kennedy");
@@ -99,7 +99,7 @@ public class Level_03_PageObject extends BasePage{
         homePage.clickToRegisterLink();
 
         // tu home page click voa register lonk no se mo ra trang register page
-        registerPage=new RegisterPageObject();
+        registerPage=new RegisterPageObject(driver);
 
         registerPage.enterToFirstNameTextbox("John");
         registerPage.enterToLastNameTextbox("Kennedy");
@@ -109,7 +109,7 @@ public class Level_03_PageObject extends BasePage{
 
         registerPage.clickToRegisterButton();
 
-        Assert.assertEquals(registerPage.getPasswordErrorMessageText(),"<p>Password must meet the following rules: </p><ul><li>must have at least 6 characters and not greater than 64 characters</li></ul>");
+        Assert.assertEquals(registerPage.getPasswordErrorMessageText2(),"<p>Password must meet the following rules: </p><ul><li>must have at least 6 characters and not greater than 64 characters</li></ul>");
 
 
 
@@ -125,7 +125,7 @@ public class Level_03_PageObject extends BasePage{
         homePage.clickToRegisterLink();
 
         // tu home page click voa register lonk no se mo ra trang register page
-        registerPage=new RegisterPageObject();
+        registerPage=new RegisterPageObject(driver);
 
         registerPage.enterToFirstNameTextbox("John");
         registerPage.enterToLastNameTextbox("Kennedy");
@@ -147,11 +147,11 @@ public class Level_03_PageObject extends BasePage{
         homePage.clickToRegisterLink();
 
         // tu home page click voa register lonk no se mo ra trang register page
-        registerPage=new RegisterPageObject();
+        registerPage=new RegisterPageObject(driver);
 
         registerPage.enterToFirstNameTextbox("John");
         registerPage.enterToLastNameTextbox("Kennedy");
-        registerPage.enterToEmailTextbox(getEmailRadom());
+        registerPage.enterToEmailTextbox(emailAddress);
         registerPage.enterToPasswordTextbox("123456");
         registerPage.enterToConfirmPasswordTextbox("123456");
 
@@ -168,22 +168,22 @@ public class Level_03_PageObject extends BasePage{
         homePage=new HomePageObject(driver);
 
         //click login link
-        homePage.clickToLoginLink();//manual tesst k co buoc nay luon
+        //homePage.clickToLoginLink();//manual tesst k co buoc nay luon
 
         //tu trang home mo tr trang login
-        loginPage=new LoginPageObject();//k co
+        //loginPage=new LoginPageObject(driver);//k co
 
         //input Email/Password
-        loginPage.enterToEmailTextbox(emailAddress);//k co
-        loginPage.enterToEmailPasswordTextbox("123456");//k co
+        //loginPage.enterToEmailTextbox(emailAddress);//k co
+        //loginPage.enterToEmailPasswordTextbox("123456");//k co
 
-        loginPage.clickToLoginButton();//k co
+        //loginPage.clickToLoginButton();//k co
 
-        homePage=new HomePageObject(driver);
+        //homePage=new HomePageObject(driver);
 
         homePage.clickToMyAccountLink();
 
-        customerPage=new CustomerPageObject();
+        customerPage=new CustomerPageObject(driver);
 
         //Veryfi
         Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(),"John");

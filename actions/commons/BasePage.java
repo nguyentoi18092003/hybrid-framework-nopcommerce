@@ -322,6 +322,10 @@ public class BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getWebElement(driver,locator));
     }
 
+    public void sendkeyToElement(WebDriver driver, String locator, String valueToSend){
+        getWebElement(driver,locator).clear();
+        getWebElement(driver,locator).sendKeys(valueToSend);
+    }
     public void sendkeyToElementByJS(WebDriver driver,String locator, String value) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', '" + value + "')", getWebElement(driver,locator));
     }
