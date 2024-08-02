@@ -13,6 +13,11 @@ import java.util.Set;
 ///me that 1
 
 public class BasePage {
+    //y nghia cua static la khong can phai khoi tao doi tuong ma van truy cao vao ham nay duoc
+    //co the truy cao truc tiep tu pham vi class (tuc la dung tu pham vi class goi toi cai ham do luon)
+    public static BasePage getBasePage(){
+        return new BasePage();
+    }
     //    Web browswer
     public void openPageUrl(WebDriver driver, String pageUrl){
         driver.get(pageUrl);

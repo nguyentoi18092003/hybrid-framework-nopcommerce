@@ -2,7 +2,7 @@
 <suite parallel="false" name="NopCommerce">
     <test name="Run on Firefox">
         <classes>
-            <class name="com_nopcommerce_account.Account_01_Register"></class>
+            <class name="com_nopcommerce_account.Level_01_DRY"></class>
         </classes>
     </test>
 </suite>
