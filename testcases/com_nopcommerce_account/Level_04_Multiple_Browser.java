@@ -1,12 +1,16 @@
 package com_nopcommerce_account;
 
 import commons.BasePage;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.CustomerPageObject;
 import pageObjects.HomePageObject;
@@ -16,9 +20,10 @@ import pageObjects.RegisterPageObject;
 import java.time.Duration;
 import java.util.Random;
 
-public class Level_03_PageObject {
-    WebDriver driver;
-    WebDriverWait wait;
+public class Level_04_Multiple_Browser extends BaseTest {
+    private WebDriver driver;
+
+
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
@@ -26,20 +31,18 @@ public class Level_03_PageObject {
     private String emailAddress=getEmailRadom();
 
 
-
+    @Parameters("browser")
     @BeforeClass
-    public void beforeClass(){
-        driver=new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initialize WebDriverWait
+    public void beforeClass(String browserName){
+        driver=getBrowserDriver(browserName);
 
-        driver.get("https://demo.nopcommerce.com/");
-        //Mo Url ra no o page nao-> Khoi tao page do len
-        //tu 1 page nay chuyen qua page kia-> khoi tao page do len
-        homePage=new HomePageObject(driver);
+
     }
     @Test
     public void Register_01_Empty_Data(){
+        //Mo Url ra no o page nao-> Khoi tao page do len
+        //tu 1 page nay chuyen qua page kia-> khoi tao page do len
+        homePage=new HomePageObject(driver);
         homePage.clickToRegisterLink();
 
         //Tu HomePage click vao RegisterLink no se mo ra trang register Page-> Khoi tao Page do len
@@ -195,17 +198,6 @@ public class Level_03_PageObject {
     public void afterClass(){
         driver.quit();
 
-    }
-    public void sleepInSeconds(long timeInSecond) {
-        try {
-            Thread.sleep(timeInSecond * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public String getEmailRadom() {
-        Random rand=new Random();
-        return "john"+ rand.nextInt(99999)+ "@kennedy.us";
     }
 }
 
