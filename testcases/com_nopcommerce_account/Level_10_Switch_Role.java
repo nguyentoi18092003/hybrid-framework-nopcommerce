@@ -1,6 +1,7 @@
 package com_nopcommerce_account;
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import commons.PageGeneratortManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -28,18 +29,18 @@ public class Level_10_Switch_Role extends BaseTest {
 
     private String emailAddress=getEmailRadom();
 
-    private String adminUrl,endUserUrl;
+    private String adminUrl= GlobalConstants.DEV_ADMIN_URL;
+    private String userUrl=GlobalConstants.DEV_USER_URL;
 
 
 
-    @Parameters({"browser","adminUrl","userUrl"})//browser la co dinh roi(keiu lay ra ten trinh duyet ben xml de chay), adminUrl, userUrl la 2 diem mk dinh nghia ben xml
+    @Parameters({"browser"})//browser la co dinh roi(keiu lay ra ten trinh duyet ben xml de chay), adminUrl, userUrl la 2 diem mk dinh nghia ben xml
     //brwoser map vs browserName,adminUrl map vs String adminUrl,userUrl map vs String userUrl ben duoi
     @BeforeClass
-    public void beforeClass(String browserName,String adminUrl,String userUrl){
+    public void beforeClass(String browserName){
         driver=getBrowserDriver(browserName,userUrl);
 
-        this.adminUrl=adminUrl;
-        this.endUserUrl = userUrl;
+
 
         homePage= PageGeneratortManager.getHomePage(driver);//ben kia de kieu static, nen ham nay dung o class goi dc luon k can phai khoi tao
     }
@@ -69,7 +70,7 @@ public class Level_10_Switch_Role extends BaseTest {
         homePage.openPageUrl(driver,this.adminUrl);
         adminLoginPage=PageGeneratortManager.getAdminLoginPage(driver);
 
-        adminDashboardPage=adminLoginPage.loginToAdmin("admin@yourstore.com","admin");
+        adminDashboardPage=adminLoginPage.loginToAdmin(GlobalConstants.DEV_ADMIN_USERNAME,GlobalConstants.DEV_ADMIN_PASSWORD);
         Assert.assertTrue(adminDashboardPage.isPageLoadedSuccess(driver));
     }
     @Test
@@ -77,7 +78,7 @@ public class Level_10_Switch_Role extends BaseTest {
        adminLoginPage= adminDashboardPage.clickToLogoutLink();
 
        //LoginPage (admin)->HomePage(User)
-        adminLoginPage.openPageUrl(driver,this.endUserUrl);
+        adminLoginPage.openPageUrl(driver,this.userUrl);
         homePage=PageGeneratortManager.getHomePage(driver);
 
 
