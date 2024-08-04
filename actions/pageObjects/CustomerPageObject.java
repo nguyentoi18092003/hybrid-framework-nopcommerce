@@ -2,6 +2,7 @@ package pageObjects;
 
 
 import commons.BasePage;
+import commons.PageGeneratortManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.CustomerPageUI;
 
@@ -28,4 +29,6 @@ public class CustomerPageObject extends BasePage {
         return getElementAttribute(driver,CustomerPageUI.EMAIL_ADDRESS_TEXTBOX,"value");
 
     }
+
+
 }

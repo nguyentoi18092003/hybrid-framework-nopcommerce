@@ -6,6 +6,13 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.AddressPageObject;
+import pageObjects.CustomerPageObject;
+import pageObjects.OrderPageObject;
+import pageObjects.RewardPointPageObject;
+import pageUIs.BasePageUI;
+import pageUIs.CustomerPageUI;
+import pageUIs.OrderPageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -360,9 +367,37 @@ public class BasePage {
         new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver,locator)));
     }
 
-    public void waitForElementClickable(WebDriver driver, String locator){
+    protected void waitForElementClickable(WebDriver driver, String locator){
         new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver,locator)));
     }
+
+    //day la nhung trang dung chung(Phan dung chung thi nem vo day)- con dung rinf thi van viet o page object class
+    public AddressPageObject openAddressPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.ADDRESS_LINK_TEXT);
+        clickToElement(driver,BasePageUI.ADDRESS_LINK_TEXT);
+        return PageGeneratortManager.getAddressPage(driver);
+    }
+
+    public OrderPageObject openOrderPage(WebDriver driver) {
+        waitForElementClickable(driver,BasePageUI.ORDER_LINK_TEXT);
+        clickToElement(driver,BasePageUI.ORDER_LINK_TEXT);
+        return PageGeneratortManager.getOrderPage(driver);
+    }
+
+    public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+        waitForElementClickable(driver,BasePageUI.REWARD_POINT_LINK_TEXT);
+        clickToElement(driver,BasePageUI.REWARD_POINT_LINK_TEXT);
+        return PageGeneratortManager.getRewardPointPage(driver);
+
+    }
+
+    public CustomerPageObject openCustomerPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.ORDER_INFO_LINK_TEXT);
+        clickToElement(driver,BasePageUI.ORDER_INFO_LINK_TEXT);
+        return PageGeneratortManager.getCustomerPage(driver);
+    }
+
+
 
 
 
