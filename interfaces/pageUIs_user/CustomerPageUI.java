@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs_user;
 
 public class CustomerPageUI {
     public static final String FIRST_NAME_TEXTBOX="//input[@id='FirstName']";

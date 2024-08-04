@@ -8,33 +8,44 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
 import pageObjects_user.*;
 
-public class Level_08_Switch_Page extends BaseTest {
+public class Level_10_Switch_Role extends BaseTest {
     private WebDriver driver;
 
 
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
-    private UserLoginPageObject loginPage;
+    private UserLoginPageObject userLoginPage;
+    private AdminLoginPageObject adminLoginPage;
     private CustomerPageObject customerPage;
     private AddressPageObject addressPage;
     private OrderPageObject orderPage;
     private RewardPointPageObject rewardPointPage;
+    private AdminDashboardPageObject adminDashboardPage;
+
     private String emailAddress=getEmailRadom();
 
+    private String adminUrl,endUserUrl;
 
 
 
-    @Parameters("browser")
+    @Parameters({"browser","adminUrl","userUrl"})//browser la co dinh roi(keiu lay ra ten trinh duyet ben xml de chay), adminUrl, userUrl la 2 diem mk dinh nghia ben xml
+    //brwoser map vs browserName,adminUrl map vs String adminUrl,userUrl map vs String userUrl ben duoi
     @BeforeClass
-    public void beforeClass(String browserName){
-        driver=getBrowserDriver(browserName);
+    public void beforeClass(String browserName,String adminUrl,String userUrl){
+        driver=getBrowserDriver(browserName,userUrl);
+
+        this.adminUrl=adminUrl;
+        this.endUserUrl = userUrl;
+
         homePage= PageGeneratortManager.getHomePage(driver);//ben kia de kieu static, nen ham nay dung o class goi dc luon k can phai khoi tao
     }
 
     @Test
-    public void User_01_Register_Success(){
+    public void User_01_User_To_Admin(){
         registerPage=homePage.clickToRegisterLink();
 
         registerPage.enterToFirstNameTextbox("John");
@@ -48,40 +59,29 @@ public class Level_08_Switch_Page extends BaseTest {
         //chay qya roi lay text de verify voi 1 text ma mk mong doi
         Assert.assertEquals(registerPage.getRegisterSuccessMessageText(),"Your registration completed");
 
-    }
-    @Test
-    public void User_02_Login_Success(){
         homePage=registerPage.clickToNopCommerceLogo();
 
-        customerPage=homePage.clickToMyAccountLink();
+        homePage.clickToLogoutLink();
 
-        Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(),"John");
-        Assert.assertEquals(customerPage.getLastNameTextboxAttributeValue(),"Kennedy");
-        Assert.assertEquals(customerPage.getEmailAddressTextboxAttributeValue(),emailAddress);
+        //customerPage=homePage.clickToMyAccountLink();
+        //Home page(User)-> Login Page(Admin)
 
+        homePage.openPageUrl(driver,this.adminUrl);
+        adminLoginPage=PageGeneratortManager.getAdminLoginPage(driver);
+
+        adminDashboardPage=adminLoginPage.loginToAdmin("admin@yourstore.com","admin");
+        Assert.assertTrue(adminDashboardPage.isPageLoadedSuccess(driver));
     }
-
     @Test
-    public void User_03_Switch_Page(){
-        //Customer Page-> AddressPage();
-        addressPage=customerPage.openAddressPage();
+    public void User_02_Admin_To_User(){
+       adminLoginPage= adminDashboardPage.clickToLogoutLink();
 
-        //Customer Page-> Order Page
-        orderPage=addressPage.openOrderPage();
+       //LoginPage (admin)->HomePage(User)
+        adminLoginPage.openPageUrl(driver,this.endUserUrl);
+        homePage=PageGeneratortManager.getHomePage(driver);
 
-        //Order Page-> Address Page
-        customerPage=orderPage.openCustomerPage();
 
-        //Customer Page-> Order Page
-        orderPage=customerPage.openOrderPage();
 
-        addressPage=orderPage.openAddressPage();
-
-        rewardPointPage=addressPage.openRewardPointPage();
-
-        customerPage=rewardPointPage.openCustomerPage();
-
-        rewardPointPage=customerPage.openRewardPointPage();
 
 
 

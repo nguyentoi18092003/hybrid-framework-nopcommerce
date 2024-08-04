@@ -1,24 +1,16 @@
 package com_nopcommerce_account;
 
-import commons.BasePage;
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
-
-import java.time.Duration;
-import java.util.Random;
+import pageObjects_user.CustomerPageObject;
+import pageObjects_user.HomePageObject;
+import pageObjects_user.UserLoginPageObject;
+import pageObjects_user.RegisterPageObject;
 
 public class Level_04_Multiple_Browser extends BaseTest {
     private WebDriver driver;
@@ -26,7 +18,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private CustomerPageObject customerPage;
     private String emailAddress=getEmailRadom();
 

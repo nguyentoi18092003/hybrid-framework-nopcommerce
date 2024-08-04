@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects_user;
 
 import commons.BasePage;
 import commons.PageGeneratortManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.HomePageUI;
+import pageUIs_user.HomePageUI;
 
 
 public class HomePageObject extends BasePage {
@@ -29,5 +29,11 @@ public class HomePageObject extends BasePage {
         waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
         clickToElement(driver,HomePageUI.MY_ACCOUNT_LINK);
         return PageGeneratortManager.getCustomerPage(driver);
+    }
+
+    public void clickToLogoutLink() {
+        //a[@class='ico-logout']
+        waitForElementClickable(driver, HomePageUI.LOGOUT_LINK);
+        clickToElement(driver,HomePageUI.LOGOUT_LINK);
     }
 }

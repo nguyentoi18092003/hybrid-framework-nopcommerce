@@ -1,6 +1,5 @@
 package com_nopcommerce_account;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,10 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects_user.CustomerPageObject;
+import pageObjects_user.HomePageObject;
+import pageObjects_user.UserLoginPageObject;
+import pageObjects_user.RegisterPageObject;
 
 import java.time.Duration;
 import java.util.Random;
@@ -21,7 +20,7 @@ public class Level_03_PageObject {
     WebDriverWait wait;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private CustomerPageObject customerPage;
     private String emailAddress=getEmailRadom();
 

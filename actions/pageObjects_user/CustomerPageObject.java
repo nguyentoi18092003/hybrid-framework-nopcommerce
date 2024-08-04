@@ -1,14 +1,13 @@
-package pageObjects;
+package pageObjects_user;
 
 
-import commons.BasePage;
-import commons.PageGeneratortManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.CustomerPageUI;
+import pageUIs_user.CustomerPageUI;
 
-public class CustomerPageObject extends BasePage {
+public class CustomerPageObject extends MyAccountSideBarPageObject {
     WebDriver driver;
     public CustomerPageObject(WebDriver driver){
+        super(driver);//vi thang cha mk ke thua no co khoi tao, nen mk ohai co ham nay
         this.driver=driver;
 
     }

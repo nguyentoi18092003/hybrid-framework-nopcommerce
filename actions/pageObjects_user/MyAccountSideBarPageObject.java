@@ -1,0 +1,40 @@
+package pageObjects_user;
+
+import commons.BasePage;
+import commons.PageGeneratortManager;
+import org.openqa.selenium.WebDriver;
+import pageUIs_user.MyAccountSideBarPageUI;
+
+public class MyAccountSideBarPageObject extends BasePage {
+    WebDriver driver;
+    public MyAccountSideBarPageObject(WebDriver driver){
+        this.driver=driver;
+    }
+
+    //day la nhung trang dung chung(Phan dung chung thi nem vo day)- con dung rinf thi van viet o page object class
+    public AddressPageObject openAddressPage() {
+        waitForElementClickable(driver, MyAccountSideBarPageUI.ADDRESS_LINK_TEXT);
+        clickToElement(driver,MyAccountSideBarPageUI.ADDRESS_LINK_TEXT);
+        return PageGeneratortManager.getAddressPage(driver);
+    }
+
+    public OrderPageObject openOrderPage() {
+        waitForElementClickable(driver,MyAccountSideBarPageUI.ORDER_LINK_TEXT);
+        clickToElement(driver,MyAccountSideBarPageUI.ORDER_LINK_TEXT);
+        return PageGeneratortManager.getOrderPage(driver);
+    }
+
+    public RewardPointPageObject openRewardPointPage() {
+        waitForElementClickable(driver,MyAccountSideBarPageUI.REWARD_POINT_LINK_TEXT);
+        clickToElement(driver,MyAccountSideBarPageUI.REWARD_POINT_LINK_TEXT);
+        return PageGeneratortManager.getRewardPointPage(driver);
+
+    }
+
+    public CustomerPageObject openCustomerPage() {
+        waitForElementClickable(driver, MyAccountSideBarPageUI.ORDER_INFO_LINK_TEXT);
+        clickToElement(driver,MyAccountSideBarPageUI.ORDER_INFO_LINK_TEXT);
+        return PageGeneratortManager.getCustomerPage(driver);
+    }
+
+}
