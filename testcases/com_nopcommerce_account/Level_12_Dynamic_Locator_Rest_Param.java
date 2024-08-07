@@ -64,6 +64,7 @@ public class Level_12_Dynamic_Locator_Rest_Param extends BaseTest {
     @Test
     public void User_03_Switch_Page(){
         //Customer Page-> AddressPage();
+        //tai sao phai ep kieu: do ben PageObject mk tra ve thang cha cua no la MyAccountSideBarPageObject la cha cua AddressPageObject
         addressPage=(AddressPageObject) customerPage.openDynamicSideBarPage("Addresses");
 
         //Customer Page-> Order Page
