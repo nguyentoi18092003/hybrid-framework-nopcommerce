@@ -1,5 +1,7 @@
 package commons;
 
+import java.io.File;
+
 public class GlobalConstants {
     //server url: Dev, Testing/stating/product
     //Database: Dev/testing/Staging/Product
@@ -18,7 +20,7 @@ public class GlobalConstants {
     public static final String DEV_ADMIN_PASSWORD="admin";
     public static final String OS_NAME=System.getProperty("os.name");
     public static final String RELATIVE_PROJECT_PATH=System.getProperty("user.dir");
-    public static final String UPLOAD_PATH=RELATIVE_PROJECT_PATH+"/uploadFiles/";
-    public static final String DOWNLOAD_PATH=RELATIVE_PROJECT_PATH+"/downloadFiles/";
+    public static final String UPLOAD_PATH=RELATIVE_PROJECT_PATH+ File.separator+"uploadFiles"+File.separator;//File.separator no se tu biet lauy "\" doi vs window vaf "/" vs mac
+    public static final String DOWNLOAD_PATH=RELATIVE_PROJECT_PATH+File.separator+"downloadFiles"+File.separator;
 
 }

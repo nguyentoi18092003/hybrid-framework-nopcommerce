@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs_user.BasePageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -190,6 +191,9 @@ public class BasePage {
     }
     public  void clickToElement(WebDriver driver, String locator,String ... restParams){
         getWebElement(driver,getDynamicLocator(locator,restParams)).click();
+    }
+    public  void clickToElement(WebDriver driver, WebElement element){
+        element.click();
     }
 
 
@@ -429,6 +433,11 @@ public class BasePage {
         new WebDriverWait(driver,Duration.ofSeconds(longTimeOut)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver,locator)));
     }
 
+    protected void waitForElementClickable(WebDriver driver, WebElement element){
+        new WebDriverWait(driver,Duration.ofSeconds(longTimeOut)).until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+
     protected void waitForElementClickable(WebDriver driver, String locator,String ...restParams){
         new WebDriverWait(driver,Duration.ofSeconds(longTimeOut)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver,getDynamicLocator(locator,restParams))));
     }
@@ -441,7 +450,19 @@ public class BasePage {
             }
         });
     }
+
+    public void uploadMultipleFiles(WebDriver driver,String ...fileNames){
+        String filePath=GlobalConstants.UPLOAD_PATH;
+        String fullFileName="";
+        for(String file:fileNames){
+            fullFileName=fullFileName+filePath+file+"\n";//can \n mk ms upload dc nhieu file xem them trong phan cu
+        }
+        fullFileName=fullFileName.trim();// ham trim de xoa \n o dau va cuoi
+        getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
+    }
+
     private long longTimeOut=GlobalConstants.LONG_TIMEOUT;
+
 
 }
 
