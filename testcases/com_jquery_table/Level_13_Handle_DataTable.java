@@ -12,11 +12,17 @@ import org.testng.annotations.Test;
 import pageObjects_jquery.HomePageObject;
 import pageObjects_jquery.PageGeneratorManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Level_13_Handle_DataTable extends BaseTest {
     private WebDriver driver;
 
     HomePageObject homePage;
+    List<String> allValueUI =new ArrayList<String>();
+    List<String> allValueAPI =new ArrayList<String>();
+    List<String> allValueDB =new ArrayList<String>();
 
 
     @Parameters({"browser","url"})
@@ -72,9 +78,35 @@ public class Level_13_Handle_DataTable extends BaseTest {
         homePage.clickToRowActionByCountryName("AFRICA","edit");
         homePage.refreshCurrentPage(driver);
 
+    }
+    public void TC_05_Get_All_Column_Values(){
+        //Lay du dieu tren UI
+        allValueUI=homePage.getAllPageValuesByColumnName("Country");
 
+        //API
+        allValueAPI=homePage.getAllPageValuesByColumnNameInAPI("Country");
 
+        //DB
+        allValueDB=homePage.getAllPageValuesByColumnNameInDB("Country");
 
+        Assert.assertEquals(allValueUI,allValueDB);
+        //TC nay thay chi noi y tupng thoi
+
+    }
+    @Test
+    public void TC_06_Action_By_Index(){
+        //TC nay lam o trang khac nen mo tam nhu nay
+        homePage.openPageUrl(driver,"https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/");
+
+        //Nhap vao textbox tai cot Contact Person dong thu 2 voi gia tri la Oliver Kahl
+        homePage.enterToTextboxByColumnNameAndRowIndex("Contact Person","2","Oliver Kahl");
+
+        //select du lieu cot country dong thu 3
+        homePage.selectDropdownByColumnNameAndRowIndex("Country","3","Germany");
+        //chu y doi voi cot co date picker thi mk remove thuoc tinh trong dom di cu the la type="date" (ham remove co san trong basepage r chi vec su dung thou  roi senkey nhu textbox binh thuong thoi)
+
+        //click vao checkbox tai cot NPO?dong thu 1
+        homePage.clickToCheckboxByColumnNameAndRowIndex("NPO?","2");
     }
 
     @AfterClass
