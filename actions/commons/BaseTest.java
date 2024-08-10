@@ -1,11 +1,17 @@
 package commons;
 
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -14,7 +20,12 @@ import java.time.Duration;
 import java.util.Random;
 
 public class BaseTest {
+    protected final Logger log;////Log4j2
     WebDriver driver;
+    public BaseTest(){
+        log= LogManager.getLogger(getClass());//Log4j2
+
+    }
     protected WebDriver getBrowserDriver(String browserName){
         BrowserList browser=BrowserList.valueOf(browserName.toUpperCase());
         if(browser==BrowserList.FIREFOX){
@@ -89,7 +100,9 @@ public class BaseTest {
         try {
 
             Assert.assertTrue(condition);
+            log.info("-------------------------PASSED-------------------------");
         } catch (Throwable e) {
+            log.info("-------------------------FAILED-------------------------");
             pass = false;
 
             // Add lỗi vào ReportNG
@@ -104,7 +117,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertFalse(condition);
+            log.info("-------------------------PASSED-------------------------");
         } catch (Throwable e) {
+            log.info("-------------------------FAILED-------------------------");
+
             pass = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
@@ -117,7 +133,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertEquals(actual, expected);
+            log.info("-------------------------PASSED-------------------------");
+
         } catch (Throwable e) {
+            log.info("-------------------------FAILED-------------------------");
             pass = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);

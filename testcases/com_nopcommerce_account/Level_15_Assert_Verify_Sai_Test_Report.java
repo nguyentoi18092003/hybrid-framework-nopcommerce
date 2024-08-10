@@ -70,6 +70,7 @@ public class Level_15_Assert_Verify_Sai_Test_Report extends BaseTest {
 //        verifyEquals(registerPage.getRegisterSuccessMessageText(),"Your registration completed hehe");
 
         //veryfi button register hien thi-> thuc the co hien thi nhung mk check la false->FALSE;
+        log.info("User_01- Step 01: Verify Title is displayed");
         verifyFalse(homePage28tech.isTitleDisPlayed());
 
 //        homePage28tech.enterToRegisterTextBox("sdfasdf");
@@ -78,9 +79,16 @@ public class Level_15_Assert_Verify_Sai_Test_Report extends BaseTest {
         //True
         //verifyEquals(homePage28tech.getTextErrorMessage(),"Số điện thoại chưa chính xác");
 
+        log.info("User_01- Step 01: Verify Title ");
         verifyEquals(homePage28tech.getTextFooter("Về chúng tôi"),"Về chúng tôi");
+
+        log.info("User_01- Step 02: Verify TextFooter1 ");
         verifyEquals(homePage28tech.getTextFooter("Điều khoản dịch vụ"),"Điều khoản dịch vụ sadjfk");
+
+        log.info("User_01- Step 03: Verify TextFooter2 ");
         verifyEquals(homePage28tech.getTextFooter("Chính sách bảo mật"),"Chính sách bảo mật");
+
+        log.info("User_01- Step 04: Verify TextFooter13 ");
         verifyEquals(homePage28tech.getTextFooter("Hướng dẫn thanh toán"),"Hướng dẫn thanh toán");
 
     }

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ThuVienAssert">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libAssertJ/assertj-core-3.24.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libAssertJ/byte-buddy-1.12.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
