@@ -1,6 +1,7 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
+import pageObject_28tech.HomePage28techObject;
 import pageObjects.admin.AdminDashboardPageObject;
 import pageObjects.admin.AdminLoginPageObject;
 import pageObjects_user.*;
@@ -37,4 +38,8 @@ public class PageGeneratortManager {
     public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver){
         return new AdminDashboardPageObject(driver);
     }
+    public static HomePage28techObject gethomePage28tech(WebDriver driver){
+        return new HomePage28techObject(driver);
+    }
+
 }

@@ -11,5 +11,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="thuvien" level="project" />
+    <orderEntry type="library" name="ThuVienAssert" level="project" />
   </component>
 </module>

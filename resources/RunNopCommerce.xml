@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="NopCommerce">
+<!--    DOng lisenr nay de no show loi len conselog-->
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+    </listeners>
 
 
     <test name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com_nopcommerce_account.Level_12_Dynamic_Locator_Rest_Param"></class>
+            <class name="com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report"></class>
         </classes>
     </test>
 
