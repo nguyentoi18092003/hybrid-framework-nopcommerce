@@ -1,0 +1,20 @@
+[11-08-2024 06:42:12.272 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title is displayed
+[11-08-2024 06:42:12.612 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------FAILED-------------------------
+[11-08-2024 06:42:12.613 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title 
+[11-08-2024 06:42:12.884 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:12.885 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 02: Verify TextFooter1 
+[11-08-2024 06:42:12.962 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------FAILED-------------------------
+[11-08-2024 06:42:12.962 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 03: Verify TextFooter2 
+[11-08-2024 06:42:13.100 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.100 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 04: Verify TextFooter13 
+[11-08-2024 06:42:13.179 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.265 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title is displayed
+[11-08-2024 06:42:13.367 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.368 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title 
+[11-08-2024 06:42:13.478 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.480 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 02: Verify TextFooter1 
+[11-08-2024 06:42:13.554 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.555 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 03: Verify TextFooter2 
+[11-08-2024 06:42:13.671 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------
+[11-08-2024 06:42:13.672 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 04: Verify TextFooter13 
+[11-08-2024 06:42:13.747 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - -------------------------PASSED-------------------------

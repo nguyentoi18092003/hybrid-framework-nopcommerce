@@ -1,0 +1,5 @@
+[10-08-2024 14:48:45.022 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title is displayed
+[10-08-2024 14:48:45.384 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 01: Verify Title 
+[10-08-2024 14:48:45.557 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 02: Verify TextFooter1 
+[10-08-2024 14:48:45.674 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 03: Verify TextFooter2 
+[10-08-2024 14:48:45.791 INFO com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report] - User_01- Step 04: Verify TextFooter13 

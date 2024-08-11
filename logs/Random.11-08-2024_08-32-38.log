@@ -1,0 +1,11 @@
+[11-08-2024 08:32:47.226 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 01: Verify Title is displayed
+[11-08-2024 08:32:47.426 INFO com_nopcommerce_account.Level_17_ReportNG] - -------------------------FAILED-------------------------
+[11-08-2024 08:32:47.426 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 01: Verify Title 
+[11-08-2024 08:32:47.565 INFO com_nopcommerce_account.Level_17_ReportNG] - -------------------------PASSED-------------------------
+[11-08-2024 08:32:47.566 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 02: Verify TextFooter1 
+[11-08-2024 08:32:47.770 INFO com_nopcommerce_account.Level_17_ReportNG] - -------------------------FAILED-------------------------
+[11-08-2024 08:32:47.771 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 03: Verify TextFooter2 
+[11-08-2024 08:32:47.888 INFO com_nopcommerce_account.Level_17_ReportNG] - -------------------------PASSED-------------------------
+[11-08-2024 08:32:47.889 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 04: Verify TextFooter13 
+[11-08-2024 08:32:47.995 INFO com_nopcommerce_account.Level_17_ReportNG] - -------------------------PASSED-------------------------
+[11-08-2024 08:32:48.233 INFO com_nopcommerce_account.Level_17_ReportNG] - User_01- Step 01: Verify Title is displayed

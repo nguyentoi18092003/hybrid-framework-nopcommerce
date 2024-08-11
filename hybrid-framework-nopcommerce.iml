@@ -15,5 +15,6 @@
     <orderEntry type="library" name="ThuVienAssert" level="project" />
     <orderEntry type="library" name="log4j-api-2.23.1" level="project" />
     <orderEntry type="library" name="libReportNG" level="project" />
+    <orderEntry type="library" name="libExtend5" level="project" />
   </component>
 </module>

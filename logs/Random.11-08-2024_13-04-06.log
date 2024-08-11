@@ -1,0 +1,7 @@
+[11-08-2024 13:04:06.799 INFO com_nopcommerce_account.Level_18_Extent_V5] - Starting delete all file in ReportNG screenshot
+[11-08-2024 13:04:06.829 INFO com_nopcommerce_account.Level_18_Extent_V5] - Deleted success
+[11-08-2024 13:04:16.943 INFO com_nopcommerce_account.Level_18_Extent_V5] - -------------------------FAILED-------------------------
+[11-08-2024 13:04:17.025 INFO com_nopcommerce_account.Level_18_Extent_V5] - -------------------------PASSED-------------------------
+[11-08-2024 13:04:17.089 INFO com_nopcommerce_account.Level_18_Extent_V5] - -------------------------FAILED-------------------------
+[11-08-2024 13:04:17.146 INFO com_nopcommerce_account.Level_18_Extent_V5] - -------------------------PASSED-------------------------
+[11-08-2024 13:04:17.210 INFO com_nopcommerce_account.Level_18_Extent_V5] - -------------------------PASSED-------------------------

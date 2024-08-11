@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Run on Firefox</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Run on Firefox</h1>
+<p>
+  Test duration: 9.797s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Register_01_Empty_Data_Fail
+      </td>
+  <td class="duration">
+    0.951s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        User_01- Step 01: Verify Title is displayed<br />
+                                -------------------------FAILED-------------------------<br />
+                                User_01- Step 01: Verify Title <br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 02: Verify TextFooter1 <br />
+                                -------------------------FAILED-------------------------<br />
+                                User_01- Step 03: Verify TextFooter2 <br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 04: Verify TextFooter13 <br />
+                                -------------------------PASSED-------------------------<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable: Multiple failures (2):<br/>
+Failure 1 of 2<br/>
+java.lang.AssertionError: expected [false] but found [true]<br/>
+	at org.testng.Assert.fail(Assert.java:111)<br/>
+	at org.testng.Assert.failNotEquals(Assert.java:1578)<br/>
+	at org.testng.Assert.assertFalse(Assert.java:79)<br/>
+	at org.testng.Assert.assertFalse(Assert.java:89)<br/>
+	at commons.BaseTest.verifyFalse(BaseTest.java:120)<br/>
+	at com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report.Register_01_Empty_Data_Fail(Level_15_Assert_Verify_Sai_Test_Report.java:74)<br/>
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)<br/>
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br/>
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br/>
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br/>
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br/>
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)<br/>
+	at org.testng.TestRunner.run(TestRunner.java:619)<br/>
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br/>
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br/>
+	at org.testng.TestNG.runSuites(TestNG.java:1134)<br/>
+	at org.testng.TestNG.run(TestNG.java:1101)<br/>
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br/>
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br/>
+<br/>
+Failure 2 of 2<br/>
+java.lang.AssertionError: expected [Điều khoản dịch vụ sadjfk] but found [Điều khoản dịch vụ]</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:111)<br />
+              org.testng.Assert.failNotEquals(Assert.java:1578)<br />
+              org.testng.Assert.assertEqualsImpl(Assert.java:150)<br />
+              org.testng.Assert.assertEquals(Assert.java:132)<br />
+              org.testng.Assert.assertEquals(Assert.java:644)<br />
+              commons.BaseTest.verifyEquals(BaseTest.java:136)<br />
+              com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report.Register_01_Empty_Data_Fail(Level_15_Assert_Verify_Sai_Test_Report.java:86)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+              org.testng.TestRunner.run(TestRunner.java:619)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+              org.testng.TestNG.run(TestNG.java:1101)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Register_02_Empty_Data_Pass
+      </td>
+  <td class="duration">
+    0.485s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        User_01- Step 01: Verify Title is displayed<br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 01: Verify Title <br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 02: Verify TextFooter1 <br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 03: Verify TextFooter2 <br />
+                                -------------------------PASSED-------------------------<br />
+                                User_01- Step 04: Verify TextFooter13 <br />
+                                -------------------------PASSED-------------------------<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>
