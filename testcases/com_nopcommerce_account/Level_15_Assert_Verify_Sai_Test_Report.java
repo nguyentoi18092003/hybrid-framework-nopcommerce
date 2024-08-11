@@ -43,7 +43,7 @@ public class Level_15_Assert_Verify_Sai_Test_Report extends BaseTest {
     }
 
     @Test
-    public void Register_01_Empty_Data(){
+    public void Register_01_Empty_Data_Fail(){
 
 
 //        //dang loi do k hieu sao luc mo trinh duyet len no bi hien thi them buco xac minh con nguoi, (go xong het r, h chi chay thoi)lan sau vao test lai video thu topic 76, 1:07:00
@@ -92,7 +92,26 @@ public class Level_15_Assert_Verify_Sai_Test_Report extends BaseTest {
         verifyEquals(homePage28tech.getTextFooter("Hướng dẫn thanh toán"),"Hướng dẫn thanh toán");
 
     }
+@Test
+public void Register_02_Empty_Data_Pass(){
+    log.info("User_01- Step 01: Verify Title is displayed");
+    verifyTrue(homePage28tech.isTitleDisPlayed());
 
+    log.info("User_01- Step 01: Verify Title ");
+    verifyEquals(homePage28tech.getTextFooter("Về chúng tôi"),"Về chúng tôi");
+
+    log.info("User_01- Step 02: Verify TextFooter1 ");
+    verifyEquals(homePage28tech.getTextFooter("Điều khoản dịch vụ"),"Điều khoản dịch vụ");
+
+    log.info("User_01- Step 03: Verify TextFooter2 ");
+    verifyEquals(homePage28tech.getTextFooter("Chính sách bảo mật"),"Chính sách bảo mật");
+
+    log.info("User_01- Step 04: Verify TextFooter13 ");
+    verifyEquals(homePage28tech.getTextFooter("Hướng dẫn thanh toán"),"Hướng dẫn thanh toán");
+
+
+
+}
 
 
     @AfterClass

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="none" name="NopCommerce-Multi Automation Testing Level">
+    <suite-files>
+        <suite-file path="RunNopCommerceApi.xml"></suite-file>
+        <suite-file path="RunNopCommerceWeb.xml"></suite-file>
+    </suite-files>
+
+
+</suite>

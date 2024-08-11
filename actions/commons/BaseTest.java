@@ -14,14 +14,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 
+import java.io.File;
 import java.time.Duration;
 import java.util.Random;
 
 public class BaseTest {
+    private WebDriver driver;
     protected final Logger log;////Log4j2
-    WebDriver driver;
+
     public BaseTest(){
         log= LogManager.getLogger(getClass());//Log4j2
 
@@ -142,5 +145,33 @@ public class BaseTest {
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return pass;
+    }
+
+    //Ham nay de dung cho viec cau hinh cho reportNG
+    public WebDriver getDriver(){
+        return driver;
+    }
+    @BeforeSuite
+    public void deleteFileReportNG() {
+        log.info("Starting delete all file in ReportNG screenshot");
+        // Remove all file in ReportNG screenshot (image)
+        deleteAllFileInFolder();
+        log.info("Deleted success");
+    }
+    public void deleteAllFileInFolder() {
+        try {
+            String pathFolderDownload = GlobalConstants.REPORT_IMAGE_PATH ;
+            File file = new File(pathFolderDownload);
+            File[] listOfFiles = file.listFiles();
+            if (listOfFiles.length != 0) {
+                for (int i = 0; i < listOfFiles.length; i++) {
+                    if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+                        new File(listOfFiles[i].toString()).delete();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
     }
 }
