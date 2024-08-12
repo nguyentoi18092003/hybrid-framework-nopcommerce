@@ -286,9 +286,33 @@ public class BasePage {
             getWebElement(driver,locator).click();
         }
     }
-
+//case 1: ELement hien thi va co trong HTML
+    //case 2: ELement khong hien thi va co trong HTML, vi trong ham nay co sd den findELement nen co trong HTMl la ok
     public boolean isElementDisplayed(WebDriver driver, String locator){
         return getWebElement(driver,locator).isDisplayed();
+    }
+
+    public void setImplicitWait(WebDriver driver, long timeout){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+
+    }
+    //K co tren UI va k co trong HTMl
+    public boolean isElementUndisplayed(WebDriver driver, String locator){
+        //Truoc khi tim element thi set time ngan thoi
+        setImplicitWait(driver,shortTimeOut);
+        List<WebElement> elements=getListWebElement(driver,locator);
+        //Tra lai timeout mac dinh cho cac step con lai
+        setImplicitWait(driver,longTimeOut);
+        if(elements.size()>0 && elements.get(0).isDisplayed()){
+            return false;
+        }
+        else if(elements.size()>0 && !elements.get(0).isDisplayed()){//Element khong co trong UI va co trong DOM
+            return true;
+        }
+        else{//Element khong co trong UI va khong co trong dom luon
+            return true;
+        }
+
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locator,String ...restParams){
@@ -462,6 +486,7 @@ public class BasePage {
     }
 
     private long longTimeOut=GlobalConstants.LONG_TIMEOUT;
+    private long shortTimeOut=GlobalConstants.SHORT_TIMEOUT;
 
 
 }

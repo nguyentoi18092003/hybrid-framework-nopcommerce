@@ -16,5 +16,6 @@
     <orderEntry type="library" name="log4j-api-2.23.1" level="project" />
     <orderEntry type="library" name="libReportNG" level="project" />
     <orderEntry type="library" name="libExtend5" level="project" />
+    <orderEntry type="library" name="allure-report" level="project" />
   </component>
 </module>
