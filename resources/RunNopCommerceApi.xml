@@ -21,10 +21,25 @@
                 <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
             </listeners>
     <parameter name="url" value="https://demo.nopcommerce.com/"/>
-    <test name="Run on Firefox">
+    <test name="Run on Firefox" preserve-order="true">
+<!--        Cai preseer order= true la de cho ns chay dung thu tu ma mk sap xep(3 cai duoi la the conf cai dau tien no luon chay truoc vi no duoc gan before test ke ca xep no cuoi cx thi no van chay dau tien)-->
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com_nopcommerce_account.Level_21_Pattern_Object"></class>
+<!--            <class name="com_nopcommnerce_share.Common_Register"></class>-->
+<!--&lt;!&ndash;            Muon chay 3 file duoi thi bat buoc phai chay cai file dau tien, vi no tao ra du lieu cde dung cho cac cai ben duoi&ndash;&gt;-->
+<!--            <class name="com_nopcommnerce_share.Order"></class>-->
+<!--            <class name="com_nopcommnerce_share.Payment"></class>-->
+<!--            <class name="com_nopcommnerce_share.Product_Detail"></class>-->
+<!--            <class name="com_nopcommnerce_share.Paymen"></class>-->
+
+            <class name="com_nopcommnerce_share.Common_Register"></class>
+            <!--            Muon chay 3 file duoi thi bat buoc phai chay cai file dau tien, vi no tao ra du lieu cde dung cho cac cai ben duoi-->
+            <class name="com_nopcommerce_cookie.Common_Register"></class>
+            <class name="com_nopcommerce_cookie.Order"></class>
+            <class name="com_nopcommerce_cookie.Product_Detail"></class>
+            <class name="com_nopcommerce_cookie.Payment"></class>
+
+
         </classes>
     </test>
 
