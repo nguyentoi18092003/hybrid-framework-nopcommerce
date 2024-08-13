@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Firefox"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="26.899">
+  <properties />
+  
+  
+            <testcase name="Home_03_Element_Undisplayed_Not_In_HTML" time="23.373" classname="com_facebook_home.Level_20_Element_Undisplayed" />
+                <testcase name="Home_02_Element_Undisplayed_In_HTML" time="2.298" classname="com_facebook_home.Level_20_Element_Undisplayed" />
+                <testcase name="Home_01_Element_Displayed" time="1.228" classname="com_facebook_home.Level_20_Element_Undisplayed" />
+      
+</testsuite>

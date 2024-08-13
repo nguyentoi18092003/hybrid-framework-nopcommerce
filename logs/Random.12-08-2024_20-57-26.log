@@ -1,0 +1,16 @@
+[12-08-2024 20:57:31.811 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:31.880 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:31.953 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:32.025 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:32.250 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Confirm Email textbox is displayed
+[12-08-2024 20:57:32.308 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:34.632 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Confirm Email textbox is not displayed
+[12-08-2024 20:57:34.728 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:37.829 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Firstname textbox is not displayed
+[12-08-2024 20:57:42.871 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:42.871 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Surname textbox is not displayed
+[12-08-2024 20:57:47.896 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:47.896 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Email textbox is not displayed
+[12-08-2024 20:57:52.946 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[12-08-2024 20:57:52.946 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Password textbox is not displayed
+[12-08-2024 20:57:57.982 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------

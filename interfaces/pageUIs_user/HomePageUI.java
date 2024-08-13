@@ -9,4 +9,6 @@ public class HomePageUI {
     public static final String LOGOUT_LINK="XPath=//a[@class='ico-logout']";
 
 
+
+
 }

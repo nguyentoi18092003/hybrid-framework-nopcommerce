@@ -20,11 +20,11 @@
                 <listener class-name="org.uncommons.reportng.HTMLReporter"/>
                 <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
             </listeners>
-
+    <parameter name="url" value="https://demo.nopcommerce.com/"/>
     <test name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com_nopcommerce_account.Level_15_Assert_Verify_Sai_Test_Report"></class>
+            <class name="com_nopcommerce_account.Level_21_Pattern_Object"></class>
         </classes>
     </test>
 

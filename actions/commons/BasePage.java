@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs_user.BaseElementUI;
 import pageUIs_user.BasePageUI;
 
 import java.time.Duration;
@@ -482,7 +483,7 @@ public class BasePage {
             fullFileName=fullFileName+filePath+file+"\n";//can \n mk ms upload dc nhieu file xem them trong phan cu
         }
         fullFileName=fullFileName.trim();// ham trim de xoa \n o dau va cuoi
-        getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
+        getWebElement(driver, BaseElementUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
     }
 
     private long longTimeOut=GlobalConstants.LONG_TIMEOUT;

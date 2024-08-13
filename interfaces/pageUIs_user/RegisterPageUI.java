@@ -14,5 +14,5 @@ public class RegisterPageUI {
     public static final String PASSWORD_ERROR_MSG_2="XPath=//span[@class='field-validation-error']";
     public static final String CONFIRM_PASSWORD_ERROR_MSG="XPath=//span[@id='ConfirmPassword-error']";
     public static final String REGISTRATION_COMPLETED_MSG="XPath=//div[@class='result']";
-    public static final String NOP_COMMERCE_LOGO="XPath=//div[@class='header-logo']//img";
+
 }
