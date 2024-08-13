@@ -18,7 +18,9 @@ import org.testng.annotations.BeforeSuite;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Locale;
 import java.util.Random;
 
 public class BaseTest {
@@ -87,12 +89,55 @@ public class BaseTest {
         Random rand=new Random();
         return "john"+ rand.nextInt(99999)+ "@kennedy.us";
     }
+    //Ham nay dung de dong browswer va dong ca ben trong task manager nua, (cho du mk co cho them ca anntion always run=trueo ben Testcase thi no cx chi dong dc trinh duyet nhung k dong dc trong task manager nene phai voet tham ham nay nua)
     protected void closeBrowser(){
-        if(driver==null){
-            System.out.println("Browser is closed");
-        }
-        else{
-            driver.quit();
+        String cmd = null;
+        try {
+            String osName = GlobalConstants.OS_NAME.toLowerCase();
+            log.info("OS name = " + osName);
+
+            String driverInstanceName = driver.toString().toLowerCase();
+            log.info("Driver instance name = " + driverInstanceName);
+
+            String browserDriverName = null;
+
+            if (driverInstanceName.contains("chrome")) {
+                browserDriverName = "chromedriver";
+            } else if (driverInstanceName.contains("internetexplorer")) {
+                browserDriverName = "IEDriverServer";
+            } else if (driverInstanceName.contains("firefox")) {
+                browserDriverName = "geckodriver";
+            } else if (driverInstanceName.contains("edge")) {
+                browserDriverName = "msedgedriver";
+            } else if (driverInstanceName.contains("opera")) {
+                browserDriverName = "operadriver";
+            } else {
+                browserDriverName = "safaridriver";
+            }
+
+            if (osName.contains("window")) {
+                cmd = "taskkill /F /FI 'IMAGENAME eq " + browserDriverName + "*'";//cau lenh nay dung de dong process
+            } else {
+                cmd = "pkill " + browserDriverName;
+            }
+            log.info("Commnand Line = " +cmd);
+//1- Close browser
+            if (driver != null) {
+                driver.manage().deleteAllCookies();
+                driver.quit();
+            }
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        } finally {
+            //2- Quit driver (executable)
+            try {
+                Process process = Runtime.getRuntime().exec(cmd);
+                process.waitFor();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

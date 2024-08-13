@@ -12,83 +12,37 @@
 <body>
 <h1>Run on Firefox</h1>
 <p>
-  Test duration: 11.195s
+  Test duration: 38.423s
 </p>
 
   <table class="resultsTable configTable">
     <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
               <tr class="group">
-        <td colspan="3">com_nopcommerce_account.Level_21_Pattern_Object</td>
+        <td colspan="3">com_nopcommerce_account.Level_22_Close_Browser</td>
       </tr>
             
 <tr>
   <td class="method">
-                  afterClass
+                  beforeClass
       </td>
   <td class="duration">
-    0.127s
+    37.042s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"firefox", "https://demo.nopcommerce.com/"</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: Failed to decode response from marionette<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class=&apos;ico-register&apos;]<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;<br/>
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;<br/>
 Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Command: [ed3bea84-4879-4133-9af7-e8506808ad47, quit {}]<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 129.0, moz:accessibilityChecks: false, moz:buildID: 20240801122119, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27632, moz:profile: C:\Users\PCDELL~2\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}<br/>
-Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
+Command: [8dff6739-41b7-453e-82a5-702096ae16f9, findElement {using=xpath, value=//a[@class=&apos;ico-register&apos;]}]<br/>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 129.0, moz:accessibilityChecks: false, moz:buildID: 20240801122119, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17568, moz:profile: C:\Users\PCDELL~2\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}<br/>
+Session ID: 8dff6739-41b7-453e-82a5-702096ae16f9</b></a><br />
     <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)<br />
-              java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)<br />
-              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)<br />
-              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)<br />
-              java.base/java.lang.Thread.run(Thread.java:833)<br />
-                </div>
-      </td>
-</tr>
-    
-      </table>
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com_nopcommerce_account.Level_21_Pattern_Object</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  Register_01_Empty_Data
-      </td>
-  <td class="duration">
-    6.040s
-  </td>
-  <td class="result">
-        
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null<br/>
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Command: [ed3bea84-4879-4133-9af7-e8506808ad47, findElement {using=xpath, value=//div[@class=&apos;header-links&apos;]//a[contains(string(),&apos;Register&apos;)]}]<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 129.0, moz:accessibilityChecks: false, moz:buildID: 20240801122119, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27632, moz:profile: C:\Users\PCDELL~2\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}<br/>
-Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
-    <div class="stackTrace" id="exception-1">
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br />
               java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
@@ -106,21 +60,19 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
               org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)<br />
               org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)<br />
               commons.BasePage.getWebElement(BasePage.java:178)<br />
-              commons.BasePage.waitForElementClickable(BasePage.java:467)<br />
-              commons.BaseElement.clickToHeaderLinkByName(BaseElement.java:24)<br />
-              com_nopcommerce_account.Level_21_Pattern_Object.Register_01_Empty_Data(Level_21_Pattern_Object.java:37)<br />
+              commons.BasePage.waitForElementClickable(BasePage.java:458)<br />
+              pageObjects_user.HomePageObject.clickToRegisterLink(HomePageObject.java:18)<br />
+              com_nopcommerce_account.Level_22_Close_Browser.beforeClass(Level_22_Close_Browser.java:31)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
               java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
               org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)<br />
               java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
               org.testng.TestRunner.run(TestRunner.java:619)<br />
@@ -137,6 +89,31 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
               com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
               com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
                 </div>
+      </td>
+</tr>
+    
+      </table>
+
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com_nopcommerce_account.Level_22_Close_Browser</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Register_01_Empty_Data
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
       </td>
 </tr>
 <tr>
@@ -144,44 +121,13 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
                   Register_02_Invalid_Email
       </td>
   <td class="duration">
-    0.005s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects_user.RegisterPageObject.clickToNopCommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
-    <div class="stackTrace" id="exception-2">
-              com_nopcommerce_account.Level_21_Pattern_Object.Register_02_Invalid_Email(Level_21_Pattern_Object.java:50)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
-              org.testng.TestRunner.run(TestRunner.java:619)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
-              org.testng.TestNG.run(TestNG.java:1101)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
       </td>
 </tr>
 <tr>
@@ -189,44 +135,13 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
                   Register_03_Invalid_Password
       </td>
   <td class="duration">
-    0.003s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
-        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects_user.RegisterPageObject.clickToNopCommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
-    <div class="stackTrace" id="exception-3">
-              com_nopcommerce_account.Level_21_Pattern_Object.Register_03_Invalid_Password(Level_21_Pattern_Object.java:68)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
-              org.testng.TestRunner.run(TestRunner.java:619)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
-              org.testng.TestNG.run(TestNG.java:1101)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
       </td>
 </tr>
 <tr>
@@ -234,44 +149,13 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
                   Register_04_Incorrect_Confirm_Password
       </td>
   <td class="duration">
-    0.003s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
-        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects_user.RegisterPageObject.clickToNopCommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
-    <div class="stackTrace" id="exception-4">
-              com_nopcommerce_account.Level_21_Pattern_Object.Register_04_Incorrect_Confirm_Password(Level_21_Pattern_Object.java:86)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
-              org.testng.TestRunner.run(TestRunner.java:619)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
-              org.testng.TestNG.run(TestNG.java:1101)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
       </td>
 </tr>
 <tr>
@@ -279,44 +163,13 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
                   Register_05_Success
       </td>
   <td class="duration">
-    0.003s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
-        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects_user.RegisterPageObject.clickToNopCommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
-    <div class="stackTrace" id="exception-5">
-              com_nopcommerce_account.Level_21_Pattern_Object.Register_05_Success(Level_21_Pattern_Object.java:104)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
-              org.testng.TestRunner.run(TestRunner.java:619)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
-              org.testng.TestNG.run(TestNG.java:1101)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
       </td>
 </tr>
 <tr>
@@ -324,48 +177,16 @@ Session ID: ed3bea84-4879-4133-9af7-e8506808ad47</b></a><br />
                   User_06_Login_Success
       </td>
   <td class="duration">
-    0.002s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
-        <a href="javascript:toggleElement('exception-6', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects_user.RegisterPageObject.clickToNopCommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
-    <div class="stackTrace" id="exception-6">
-              com_nopcommerce_account.Level_21_Pattern_Object.User_06_Login_Success(Level_21_Pattern_Object.java:124)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
-              org.testng.TestRunner.run(TestRunner.java:619)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
-              org.testng.TestNG.run(TestNG.java:1101)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
       </td>
 </tr>
       </table>
-
 
   
 </body>

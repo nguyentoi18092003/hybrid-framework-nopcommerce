@@ -758,3 +758,13 @@
 [12-08-2024 21:25:20.813 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
 [12-08-2024 21:25:20.813 INFO com_facebook_home.Level_20_Element_Undisplayed] - Verify Password textbox is not displayed
 [12-08-2024 21:25:25.888 INFO com_facebook_home.Level_20_Element_Undisplayed] - -------------------------PASSED-------------------------
+[13-08-2024 16:44:57.676 INFO com_nopcommerce_account.Level_22_Close_Browser] - OS name = windows 11
+[13-08-2024 16:44:57.710 INFO com_nopcommerce_account.Level_22_Close_Browser] - Driver instance name = firefoxdriver: firefox on windows (5027c1d1-b35c-4c5c-8d3d-caa432362cb5)
+[13-08-2024 16:50:28.043 INFO com_nopcommerce_account.Level_22_Close_Browser] - OS name = windows 11
+[13-08-2024 16:50:28.054 INFO com_nopcommerce_account.Level_22_Close_Browser] - Driver instance name = firefoxdriver: firefox on windows (9f04db63-f8da-4fb0-b345-25421b7f40f0)
+[13-08-2024 16:55:40.241 INFO com_nopcommerce_account.Level_22_Close_Browser] - OS name = windows 11
+[13-08-2024 16:55:40.255 INFO com_nopcommerce_account.Level_22_Close_Browser] - Driver instance name = firefoxdriver: firefox on windows (f7a12c71-e57d-449e-a284-1ee043a013b5)
+[13-08-2024 16:55:40.256 INFO com_nopcommerce_account.Level_22_Close_Browser] - Commnand Linetaskkill /F /FI 'IMAGENAME eq geckodriver*'
+[13-08-2024 16:58:18.368 INFO com_nopcommerce_account.Level_22_Close_Browser] - OS name = windows 11
+[13-08-2024 16:58:18.393 INFO com_nopcommerce_account.Level_22_Close_Browser] - Driver instance name = firefoxdriver: firefox on windows (8dff6739-41b7-453e-82a5-702096ae16f9)
+[13-08-2024 16:58:18.394 INFO com_nopcommerce_account.Level_22_Close_Browser] - Commnand Line = taskkill /F /FI 'IMAGENAME eq geckodriver*'
